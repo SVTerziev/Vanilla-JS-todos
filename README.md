@@ -1,4 +1,4 @@
-# Vanilla-JS-todos
+# Vanilla JS todos
 Todo application written in vanilla JS, in development.
 
 #### TODO:
