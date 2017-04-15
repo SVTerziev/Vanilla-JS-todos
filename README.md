@@ -1,7 +1,7 @@
 # Vanilla-JS-todos
 Todo application written in vanilla JS, in development.
 
-####TODO:
+#### TODO:
 * Remove deleted todos from the DOM.
 * Add views for pending and done todos.
 * Add priority sorting.
