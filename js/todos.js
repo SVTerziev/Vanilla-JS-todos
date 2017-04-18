@@ -3,7 +3,7 @@ export default class Todos {
     this.storageKey = 'todos';
     this.selected = new Set();
     if (!this.storageGet(this.storageKey)) {
-      this.storageAdd(this.storageKey, []);
+      this.storageSet(this.storageKey, []);
     }
     this.add(...todos);
   }
@@ -20,7 +20,7 @@ export default class Todos {
         todos.push(newTodos);
       }
 
-      this.storageAdd(this.storageKey, todos);
+      this.storageSet(this.storageKey, todos);
     }
   }
 
@@ -32,7 +32,7 @@ export default class Todos {
     return JSON.parse(localStorage.getItem(key));
   }
 
-  storageAdd(key, value) {
+  storageSet(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
@@ -46,6 +46,6 @@ export default class Todos {
         todos.splice(index, 1);
       }
     }
-    this.storageAdd(this.storageKey, todos);
+    this.storageSet(this.storageKey, todos);
   }
 }
